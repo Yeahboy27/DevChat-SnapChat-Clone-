@@ -15,6 +15,7 @@
 		4A3E2D9B1DF90050003CD13C /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D981DF90050003CD13C /* PreviewView.swift */; };
 		4A3E2D9C1DF90050003CD13C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D991DF90050003CD13C /* CameraViewController.swift */; };
 		4A3E2D9D1DF90050003CD13C /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */; };
+		4AAFDC511DFB40F800310830 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFDC501DFB40F800310830 /* CameraVCDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4A3E2D981DF90050003CD13C /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		4A3E2D991DF90050003CD13C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
+		4AAFDC501DFB40F800310830 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		4A3E2D831DF8F8B0003CD13C /* DevChat */ = {
 			isa = PBXGroup;
 			children = (
+				4AAFDC4F1DFB408700310830 /* Protocols */,
 				4A3E2D9F1DF90085003CD13C /* Controller */,
 				4A3E2D9E1DF90080003CD13C /* View */,
 				4A3E2D841DF8F8B0003CD13C /* AppDelegate.swift */,
@@ -84,9 +87,17 @@
 			children = (
 				4A3E2D991DF90050003CD13C /* CameraViewController.swift */,
 				4A3E2D961DF8F934003CD13C /* CameraVC.swift */,
-				4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		4AAFDC4F1DFB408700310830 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFDC501DFB40F800310830 /* CameraVCDelegate.swift */,
+				4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				4A3E2D9C1DF90050003CD13C /* CameraViewController.swift in Sources */,
 				4A3E2D851DF8F8B0003CD13C /* AppDelegate.swift in Sources */,
 				4A3E2D9D1DF90050003CD13C /* PhotoCaptureDelegate.swift in Sources */,
+				4AAFDC511DFB40F800310830 /* CameraVCDelegate.swift in Sources */,
 				4A3E2D9B1DF90050003CD13C /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
