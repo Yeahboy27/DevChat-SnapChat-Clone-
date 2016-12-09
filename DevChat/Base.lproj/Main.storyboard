@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="width" constant="63" id="jlV-LF-t14"/>
                                 </constraints>
                                 <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSW-hq-tU7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDW-3B-4vO">
                                 <rect key="frame" x="298" y="28" width="69" height="48"/>
@@ -39,6 +42,13 @@
                                     <constraint firstAttribute="width" constant="69" id="Jaj-Hs-AeB"/>
                                     <constraint firstAttribute="height" constant="48" id="Rji-eX-Y5D"/>
                                 </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCameraPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hp1-Jh-IbO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du7-ZE-Tl7">
+                                <rect key="frame" x="172.5" y="321" width="29" height="24"/>
                                 <state key="normal" image="camera_icon_snap"/>
                             </button>
                         </subviews>
@@ -48,14 +58,19 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ziu-3T-IWG" secondAttribute="bottom" id="6mn-mP-7Ye"/>
                             <constraint firstAttribute="trailing" secondItem="ziu-3T-IWG" secondAttribute="trailing" id="GRS-nS-5Sc"/>
                             <constraint firstItem="RDW-3B-4vO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="I9t-Lz-MLU"/>
+                            <constraint firstItem="du7-ZE-Tl7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M7v-dn-t2C"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JXU-xM-A6u" secondAttribute="bottom" constant="8" id="PmB-J1-088"/>
                             <constraint firstAttribute="trailing" secondItem="RDW-3B-4vO" secondAttribute="trailing" constant="8" id="aHJ-te-l3A"/>
                             <constraint firstItem="ziu-3T-IWG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fMz-aA-FzQ"/>
                             <constraint firstItem="ziu-3T-IWG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s2f-mR-KmO"/>
+                            <constraint firstItem="du7-ZE-Tl7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tUX-EK-hTa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="RDW-3B-4vO" id="IwG-oK-zi1"/>
+                        <outlet property="photoButton" destination="du7-ZE-Tl7" id="Pzd-Do-hDL"/>
                         <outlet property="previewView" destination="ziu-3T-IWG" id="csc-pd-Rlh"/>
+                        <outlet property="recordButton" destination="JXU-xM-A6u" id="xW9-ZO-KqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

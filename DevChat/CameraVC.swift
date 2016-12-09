@@ -11,11 +11,28 @@ import UIKit
 class CameraVC: CameraViewController {
 
     @IBOutlet weak var previewView: PreviewView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var photoButton: UIButton!
     
     override func viewDidLoad() {
         
-        self._previewView = previewView
+        _previewView = previewView
+        _cameraButton = cameraButton
+        _recordButton = recordButton
+        _photoButton = photoButton
+        
         super.viewDidLoad()
     }
 
+    @IBAction func recordButtonPressed(_ sender: UIButton) {
+        
+        toggleMovieRecording()
+    }
+    
+    @IBAction func changeCameraPressed(_ sender: UIButton) {
+        
+        changeCamera()
+    }
+    
 }
