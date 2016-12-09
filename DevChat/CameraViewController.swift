@@ -177,7 +177,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 			We do not create an AVCaptureMovieFileOutput when setting up the session because the
 			AVCaptureMovieFileOutput does not support movie recording with AVCaptureSessionPresetPhoto.
 		*/
-		session.sessionPreset = AVCaptureSessionPresetPhoto
+		session.sessionPreset = AVCaptureSessionPresetHigh
 		
 		// Add video input.
 		do {
@@ -309,7 +309,8 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 
 	//@IBOutlet private weak var captureModeControl: UISegmentedControl!
 	
-	@IBAction private func toggleCaptureMode(_ captureModeControl: UISegmentedControl) {
+	func toggleCaptureMode() {
+        /*
 		if captureModeControl.selectedSegmentIndex == CaptureMode.photo.rawValue {
 			_recordButton.isEnabled = false
 			
@@ -336,8 +337,9 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 				}
 			}
 		}
-		else if captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
-		{
+            */
+		//else if captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
+		//{
 			//livePhotoModeButton.isHidden = true
 			
 			sessionQueue.async { [unowned self] in
@@ -360,7 +362,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 						self._recordButton.isEnabled = true
 					}
 				}
-			}
+			//}
 		}
 	}
 	
@@ -502,7 +504,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 	
 	weak var _photoButton: UIButton!
 	
-	@IBAction private func capturePhoto(_ photoButton: UIButton) {
+	func capturePhoto() {
 		/*
 			Retrieve the video preview layer's video orientation on the main queue before
 			entering the session queue. We do this to ensure UI elements are accessed on

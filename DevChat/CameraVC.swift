@@ -23,6 +23,8 @@ class CameraVC: CameraViewController {
         _photoButton = photoButton
         
         super.viewDidLoad()
+        
+        toggleCaptureMode()
     }
 
     @IBAction func recordButtonPressed(_ sender: UIButton) {
@@ -30,6 +32,10 @@ class CameraVC: CameraViewController {
         toggleMovieRecording()
     }
     
+    @IBAction func photoButtonPressed(_ sender: UIButton) {
+        
+        capturePhoto()
+    }
     @IBAction func changeCameraPressed(_ sender: UIButton) {
         
         changeCamera()
