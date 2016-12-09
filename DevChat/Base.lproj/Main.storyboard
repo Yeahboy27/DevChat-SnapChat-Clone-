@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CameraVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModule="DevChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-3T-IWG" userLabel="PreviewView" customClass="PreviewView" customModule="DevChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXU-xM-A6u">
+                                <rect key="frame" x="155.5" y="601" width="63" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Vo2-NR-p43"/>
+                                    <constraint firstAttribute="width" constant="63" id="jlV-LF-t14"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDW-3B-4vO">
+                                <rect key="frame" x="298" y="28" width="69" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="Jaj-Hs-AeB"/>
+                                    <constraint firstAttribute="height" constant="48" id="Rji-eX-Y5D"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JXU-xM-A6u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4iT-3A-B3i"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ziu-3T-IWG" secondAttribute="bottom" id="6mn-mP-7Ye"/>
+                            <constraint firstAttribute="trailing" secondItem="ziu-3T-IWG" secondAttribute="trailing" id="GRS-nS-5Sc"/>
+                            <constraint firstItem="RDW-3B-4vO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="I9t-Lz-MLU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JXU-xM-A6u" secondAttribute="bottom" constant="8" id="PmB-J1-088"/>
+                            <constraint firstAttribute="trailing" secondItem="RDW-3B-4vO" secondAttribute="trailing" constant="8" id="aHJ-te-l3A"/>
+                            <constraint firstItem="ziu-3T-IWG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fMz-aA-FzQ"/>
+                            <constraint firstItem="ziu-3T-IWG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s2f-mR-KmO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="ziu-3T-IWG" id="csc-pd-Rlh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
 </document>

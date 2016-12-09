@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4A3E2D851DF8F8B0003CD13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D841DF8F8B0003CD13C /* AppDelegate.swift */; };
-		4A3E2D871DF8F8B0003CD13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D861DF8F8B0003CD13C /* ViewController.swift */; };
 		4A3E2D8A1DF8F8B1003CD13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3E2D881DF8F8B1003CD13C /* Main.storyboard */; };
 		4A3E2D8C1DF8F8B1003CD13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3E2D8B1DF8F8B1003CD13C /* Assets.xcassets */; };
 		4A3E2D8F1DF8F8B1003CD13C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3E2D8D1DF8F8B1003CD13C /* LaunchScreen.storyboard */; };
+		4A3E2D971DF8F934003CD13C /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D961DF8F934003CD13C /* CameraVC.swift */; };
+		4A3E2D9B1DF90050003CD13C /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D981DF90050003CD13C /* PreviewView.swift */; };
+		4A3E2D9C1DF90050003CD13C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D991DF90050003CD13C /* CameraViewController.swift */; };
+		4A3E2D9D1DF90050003CD13C /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A3E2D811DF8F8B0003CD13C /* DevChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3E2D841DF8F8B0003CD13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A3E2D861DF8F8B0003CD13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A3E2D891DF8F8B1003CD13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A3E2D8B1DF8F8B1003CD13C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A3E2D8E1DF8F8B1003CD13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3E2D901DF8F8B1003CD13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A3E2D961DF8F934003CD13C /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		4A3E2D981DF90050003CD13C /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		4A3E2D991DF90050003CD13C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		4A3E2D831DF8F8B0003CD13C /* DevChat */ = {
 			isa = PBXGroup;
 			children = (
+				4A3E2D9F1DF90085003CD13C /* Controller */,
+				4A3E2D9E1DF90080003CD13C /* View */,
 				4A3E2D841DF8F8B0003CD13C /* AppDelegate.swift */,
-				4A3E2D861DF8F8B0003CD13C /* ViewController.swift */,
 				4A3E2D881DF8F8B1003CD13C /* Main.storyboard */,
 				4A3E2D8B1DF8F8B1003CD13C /* Assets.xcassets */,
 				4A3E2D8D1DF8F8B1003CD13C /* LaunchScreen.storyboard */,
 				4A3E2D901DF8F8B1003CD13C /* Info.plist */,
 			);
 			path = DevChat;
+			sourceTree = "<group>";
+		};
+		4A3E2D9E1DF90080003CD13C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A3E2D981DF90050003CD13C /* PreviewView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4A3E2D9F1DF90085003CD13C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A3E2D991DF90050003CD13C /* CameraViewController.swift */,
+				4A3E2D961DF8F934003CD13C /* CameraVC.swift */,
+				4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +121,7 @@
 				TargetAttributes = {
 					4A3E2D801DF8F8AF003CD13C = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = K9TK5QFD27;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3E2D871DF8F8B0003CD13C /* ViewController.swift in Sources */,
+				4A3E2D971DF8F934003CD13C /* CameraVC.swift in Sources */,
+				4A3E2D9C1DF90050003CD13C /* CameraViewController.swift in Sources */,
 				4A3E2D851DF8F8B0003CD13C /* AppDelegate.swift in Sources */,
+				4A3E2D9D1DF90050003CD13C /* PhotoCaptureDelegate.swift in Sources */,
+				4A3E2D9B1DF90050003CD13C /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9TK5QFD27;
 				INFOPLIST_FILE = DevChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DevChat;
@@ -270,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9TK5QFD27;
 				INFOPLIST_FILE = DevChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DevChat;
@@ -297,6 +328,7 @@
 				4A3E2D951DF8F8B1003CD13C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
