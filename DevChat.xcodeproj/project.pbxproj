@@ -18,6 +18,7 @@
 		4A3E2D9D1DF90050003CD13C /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */; };
 		4A7ED0D21DFB99D5008E86B3 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ED0D11DFB99D5008E86B3 /* RoundTextField.swift */; };
 		4A7ED0D41DFBA12B008E86B3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ED0D31DFBA12B008E86B3 /* RoundedButton.swift */; };
+		4A7ED0D61DFBC6BF008E86B3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ED0D51DFBC6BF008E86B3 /* LoginVC.swift */; };
 		4AAFDC511DFB40F800310830 /* CameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFDC501DFB40F800310830 /* CameraVCDelegate.swift */; };
 		4AB5A60F1DFB50D30017BD92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AB5A60E1DFB50D30017BD92 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		4A3E2D9A1DF90050003CD13C /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		4A7ED0D11DFB99D5008E86B3 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		4A7ED0D31DFBA12B008E86B3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		4A7ED0D51DFBC6BF008E86B3 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4AAFDC501DFB40F800310830 /* CameraVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVCDelegate.swift; sourceTree = "<group>"; };
 		4AB5A60E1DFB50D30017BD92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE6A89183DF9F0183D54258 /* Pods_DevChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			children = (
 				4A3E2D991DF90050003CD13C /* CameraViewController.swift */,
 				4A3E2D961DF8F934003CD13C /* CameraVC.swift */,
+				4A7ED0D51DFBC6BF008E86B3 /* LoginVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				4A3E2D851DF8F8B0003CD13C /* AppDelegate.swift in Sources */,
 				4A7ED0D41DFBA12B008E86B3 /* RoundedButton.swift in Sources */,
 				4A7ED0D21DFB99D5008E86B3 /* RoundTextField.swift in Sources */,
+				4A7ED0D61DFBC6BF008E86B3 /* LoginVC.swift in Sources */,
 				4A3E2D9D1DF90050003CD13C /* PhotoCaptureDelegate.swift in Sources */,
 				4AAFDC511DFB40F800310830 /* CameraVCDelegate.swift in Sources */,
 				4A3E2D9B1DF90050003CD13C /* PreviewView.swift in Sources */,

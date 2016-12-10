@@ -74,16 +74,17 @@
                         <outlet property="photoButton" destination="du7-ZE-Tl7" id="Pzd-Do-hDL"/>
                         <outlet property="previewView" destination="ziu-3T-IWG" id="csc-pd-Rlh"/>
                         <outlet property="recordButton" destination="JXU-xM-A6u" id="xW9-ZO-KqR"/>
+                        <segue destination="Kdl-IR-2Eg" kind="presentation" identifier="LoginVC" id="DQj-Rf-Wko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="IAe-wC-izj">
             <objects>
-                <viewController id="Kdl-IR-2Eg" sceneMemberID="viewController">
+                <viewController id="Kdl-IR-2Eg" customClass="LoginVC" customModule="DevChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GHl-CI-Nhc"/>
                         <viewControllerLayoutGuide type="bottom" id="1ta-3I-3w9"/>
