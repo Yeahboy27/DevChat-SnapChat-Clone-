@@ -20,9 +20,6 @@ class CameraVC: CameraViewController, CameraVCDelegate {
         
         delegate = self
         _previewView = previewView
-        //_cameraButton = cameraButton
-        //_recordButton = recordButton
-        //_photoButton = photoButton
         
         super.viewDidLoad()
         
@@ -35,7 +32,6 @@ class CameraVC: CameraViewController, CameraVCDelegate {
         guard FIRAuth.auth()?.currentUser != nil else {
             performSegue(withIdentifier: "LoginVC", sender: nil)
             return
-            //load login vc
         }
     }
 
