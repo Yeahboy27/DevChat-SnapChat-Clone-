@@ -12,18 +12,22 @@ class RegisterVC: UIViewController {
 
     @IBOutlet weak var emailField: RoundTextField!
     @IBOutlet weak var passwordField: RoundTextField!
+    @IBOutlet weak var firstNameField: RoundTextField!
+    @IBOutlet weak var lastNameField: RoundTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func registerPressed(_ sender: RoundedButton) {
         
+        let profile = ["firstName" : firstNameField.text,
+                       "lastName" : lastNameField.text]
+        
         if let email = emailField.text, let pass = passwordField.text , (email.characters.count > 0 && pass.characters.count > 0) {
             
-            AuthService.instance.register(email: email, password: pass, onComplete: { (errorMessage, data) in
+            AuthService.instance.register(email: email, password: pass, profile: profile, onComplete: { (errorMessage, data) in
                 guard errorMessage == nil else {
                     let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))

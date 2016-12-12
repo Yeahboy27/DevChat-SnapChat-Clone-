@@ -30,13 +30,17 @@ class AuthService {
         })
     }
     
-    func register(email: String, password: String, onComplete: Completion?) {
+    func register(email: String, password: String, profile: [String : Any], onComplete: Completion?) {
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
                 self.handelFirebaseError(error: error!, onComplete: onComplete)
             } else {
-                onComplete?(nil, user)
+                
+                if let uid = user?.uid {
+                    onComplete?(nil, user)
+                    DataService.instance.saveUser(uid: uid, profile: profile)
+                }
             }
         })
     }

@@ -9,7 +9,12 @@
 import UIKit
 
 @IBDesignable
-class RoundTextField: UITextField {
+class RoundTextField: UITextField, UITextFieldDelegate {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        delegate = self
+    }
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
@@ -43,5 +48,10 @@ class RoundTextField: UITextField {
             let str = NSAttributedString(string: rawString, attributes: [NSForegroundColorAttributeName: placeholderColor!])
             attributedPlaceholder = str
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return true
     }
 }

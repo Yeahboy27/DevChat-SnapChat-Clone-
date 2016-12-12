@@ -250,29 +250,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXn-O2-4yd" customClass="RoundedButton" customModule="DevChat" customModuleProvider="target">
-                                <rect key="frame" x="55" y="364" width="265" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="Y3D-zr-wDM"/>
-                                    <constraint firstAttribute="width" constant="265" id="whG-c0-up5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Create account">
-                                    <color key="titleColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginPressed:" destination="Kdl-IR-2Eg" eventType="touchUpInside" id="7ym-wk-d24"/>
-                                    <action selector="registerPressed:" destination="dmP-Yp-ZqJ" eventType="touchUpInside" id="TSG-le-mC2"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-gH-9hX">
                                 <rect key="frame" x="109.5" y="130" width="156" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
@@ -327,25 +304,102 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter last name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcE-b4-0Xg" customClass="RoundTextField" customModule="DevChat" customModuleProvider="target">
+                                <rect key="frame" x="55" y="426" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="A3E-qL-9J0"/>
+                                    <constraint firstAttribute="width" constant="265" id="atn-wr-Ba7"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.76078431369999999" green="0.95294117649999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXn-O2-4yd" customClass="RoundedButton" customModule="DevChat" customModuleProvider="target">
+                                <rect key="frame" x="55" y="488" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Y3D-zr-wDM"/>
+                                    <constraint firstAttribute="width" constant="265" id="whG-c0-up5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Create account">
+                                    <color key="titleColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="Kdl-IR-2Eg" eventType="touchUpInside" id="7ym-wk-d24"/>
+                                    <action selector="registerPressed:" destination="dmP-Yp-ZqJ" eventType="touchUpInside" id="TSG-le-mC2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter first name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1W-Te-f0S" customClass="RoundTextField" customModule="DevChat" customModuleProvider="target">
+                                <rect key="frame" x="55" y="364" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="QaG-1q-dlx"/>
+                                    <constraint firstAttribute="height" constant="42" id="suS-ap-sZL"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.76078431369999999" green="0.95294117649999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TXn-O2-4yd" firstAttribute="top" secondItem="xcE-b4-0Xg" secondAttribute="bottom" constant="20" id="B7V-Pm-dLA"/>
                             <constraint firstItem="cqB-gH-9hX" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="EY4-OF-W8p"/>
                             <constraint firstItem="Hfz-xq-jTv" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="H8Z-v2-35t"/>
                             <constraint firstItem="OVc-4b-2yi" firstAttribute="leading" secondItem="tGe-wB-va7" secondAttribute="leading" id="J9E-43-NQ2"/>
-                            <constraint firstItem="TXn-O2-4yd" firstAttribute="top" secondItem="Hfz-xq-jTv" secondAttribute="bottom" constant="20" id="JIn-lM-3wa"/>
+                            <constraint firstItem="TXn-O2-4yd" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="LCg-Gq-RAn"/>
                             <constraint firstItem="uCV-Of-rG5" firstAttribute="top" secondItem="OVc-4b-2yi" secondAttribute="bottom" id="LbU-7L-OQm"/>
                             <constraint firstAttribute="trailing" secondItem="OVc-4b-2yi" secondAttribute="trailing" id="PGP-b9-NNr"/>
                             <constraint firstItem="cqB-gH-9hX" firstAttribute="top" secondItem="9Ua-U7-bgQ" secondAttribute="bottom" constant="110" id="Rx5-Ed-EVz"/>
+                            <constraint firstItem="Y1W-Te-f0S" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="S2U-D7-OCU"/>
+                            <constraint firstItem="xcE-b4-0Xg" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="SCL-aR-MZx"/>
                             <constraint firstItem="Hfz-xq-jTv" firstAttribute="top" secondItem="HY3-gS-9dG" secondAttribute="bottom" constant="20" id="WYk-N3-OsK"/>
                             <constraint firstItem="OVc-4b-2yi" firstAttribute="top" secondItem="tGe-wB-va7" secondAttribute="top" id="bFK-qz-uY5"/>
-                            <constraint firstItem="TXn-O2-4yd" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="mEN-sr-02d"/>
+                            <constraint firstItem="xcE-b4-0Xg" firstAttribute="top" secondItem="Y1W-Te-f0S" secondAttribute="bottom" constant="20" id="g5x-qd-9MQ"/>
+                            <constraint firstItem="Y1W-Te-f0S" firstAttribute="top" secondItem="Hfz-xq-jTv" secondAttribute="bottom" constant="20" id="gVs-jb-xEs"/>
                             <constraint firstItem="HY3-gS-9dG" firstAttribute="top" secondItem="cqB-gH-9hX" secondAttribute="bottom" constant="55" id="vBi-KS-s9c"/>
                             <constraint firstItem="HY3-gS-9dG" firstAttribute="centerX" secondItem="tGe-wB-va7" secondAttribute="centerX" id="xdE-C6-rig"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="HY3-gS-9dG" id="t7A-Wf-FuI"/>
+                        <outlet property="firstNameField" destination="Y1W-Te-f0S" id="5BD-Xh-gQQ"/>
+                        <outlet property="lastNameField" destination="xcE-b4-0Xg" id="Mbo-1m-k2f"/>
                         <outlet property="passwordField" destination="Hfz-xq-jTv" id="1Qf-ZN-ijt"/>
                     </connections>
                 </viewController>

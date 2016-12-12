@@ -42,7 +42,12 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
         
-        capturePhoto()
+        //capturePhoto()
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch {
+            print("Error signing out")
+        }
     }
     @IBAction func changeCameraPressed(_ sender: UIButton) {
         
