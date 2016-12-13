@@ -10,3 +10,4 @@ import Foundation
 
 let FIR_CHILD_USERS = "users"
 let FIR_CHILD_PROFILE = "profile"
+let FIR_CHILD_VIDEOS = "videos"

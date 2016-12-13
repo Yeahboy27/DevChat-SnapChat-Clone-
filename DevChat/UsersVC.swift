@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
+import FirebaseAuth
 
 class UsersVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
@@ -102,6 +103,7 @@ class UsersVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 } else {
                     let downloadURL = meta!.downloadURL()
                     print("Download URL: \(downloadURL)")
+                    DataService.instance.sendMediaVideos(senderUid: (FIRAuth.auth()?.currentUser?.uid)!, sendingTo: self.selectedUsers, mediaURL: downloadURL!, textSnippet: "Text Snipet")
                     //save video url somewhere
                     self.dismiss(animated: true, completion: nil)
                 }

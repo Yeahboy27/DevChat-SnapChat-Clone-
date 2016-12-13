@@ -38,4 +38,16 @@ class DataService {
         mainReference.child(FIR_CHILD_USERS).child(uid).child(FIR_CHILD_PROFILE).setValue(profile)
     }
     
+    func sendMediaVideos(senderUid: String, sendingTo: Dictionary<String, User>, mediaURL: URL, textSnippet: String? = nil) {
+        
+        var uids = [String]()
+        for uid in sendingTo.keys {
+            uids.append(uid)
+        }
+        
+        let videoInfo: Dictionary<String, Any> = ["mediaURL": mediaURL.absoluteString, "userID": senderUid, "openCount": 0, "recipents": uids]
+        
+        mainReference.child(FIR_CHILD_VIDEOS).childByAutoId().setValue(videoInfo)
+    }
+    
 }
