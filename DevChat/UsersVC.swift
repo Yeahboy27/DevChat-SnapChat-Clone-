@@ -8,11 +8,22 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
 
 class UsersVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     private var users = [User]()
     private var selectedUsers = Dictionary<String, User>()
+    
+    private var _videoURL: URL?
+    
+    var videoURL: URL? {
+        set {
+            _videoURL = newValue
+        } get {
+            return _videoURL
+        }
+    }
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +33,8 @@ class UsersVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsMultipleSelection = true
+        
+        navigationItem.rightBarButtonItem?.isEnabled = false
         
         DataService.instance.usersReference.observeSingleEvent(of: .value) { (snapshot: FIRDataSnapshot) in
             
@@ -58,6 +71,7 @@ class UsersVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationItem.rightBarButtonItem?.isEnabled = true
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
         cell.setCheckMark(selected: true)
         let user = users[indexPath.row]
@@ -69,7 +83,30 @@ class UsersVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         cell.setCheckMark(selected: false)
         let user = users[indexPath.row]
         selectedUsers[user.uid] = nil
+        
+        if selectedUsers.count <= 0 {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }
     }
 
+    @IBAction func sendVideoPressed(_ sender: UIBarButtonItem) {
+        
+        if let url = _videoURL {
+            let videoName = "\(NSUUID().uuidString)\(url)"
+            let ref = DataService.instance.videoStorageReference.child(videoName)
+            
+            _ = ref.putFile(url, metadata: nil, completion: { (meta, error) in
+                
+                if error != nil {
+                    print("Error uploading video: \(error?.localizedDescription)")
+                } else {
+                    let downloadURL = meta!.downloadURL()
+                    print("Download URL: \(downloadURL)")
+                    //save video url somewhere
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        }
+    }
 
 }

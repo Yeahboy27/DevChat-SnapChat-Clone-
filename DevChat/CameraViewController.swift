@@ -741,9 +741,12 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 		if error != nil {
 			print("Movie file finishing error: \(error)")
 			success = (((error as NSError).userInfo[AVErrorRecordingSuccessfullyFinishedKey] as AnyObject).boolValue)!
+            self.delegate?.videoRecordingFailed()
 		}
 		
 		if success {
+            self.delegate?.videoRecordingComplete(videoURL: outputFileURL)
+            /*
 			// Check authorization status.
 			PHPhotoLibrary.requestAuthorization { status in
 				if status == .authorized {
@@ -764,10 +767,12 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
 				else {
 					cleanup()
 				}
-			}
+			}*/
 		}
 		else {
+            self.delegate?.videoRecordingFailed()
 			cleanup()
+ 
 		}
 		
 		// Enable the Camera and Record buttons to let the user switch camera and start another recording.

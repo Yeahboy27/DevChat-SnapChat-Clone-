@@ -34,6 +34,15 @@ class CameraVC: CameraViewController, CameraVCDelegate {
             return
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let usersVC = segue.destination as? UsersVC {
+            if let videoDict = sender as? Dictionary<String, URL> {
+                let url = videoDict["videoURL"]
+                usersVC.videoURL = url
+            }
+        }
+    }
 
     @IBAction func recordButtonPressed(_ sender: UIButton) {
         
@@ -80,6 +89,14 @@ class CameraVC: CameraViewController, CameraVCDelegate {
     func canStartRecording() {
         
         print("Can start recording")
+    }
+    
+    func videoRecordingFailed() {
+        print("Video recording failed")
+    }
+    
+    func videoRecordingComplete(videoURL: URL) {
+        performSegue(withIdentifier: "UsersVC", sender: ["videoURL": videoURL])
     }
     
 }

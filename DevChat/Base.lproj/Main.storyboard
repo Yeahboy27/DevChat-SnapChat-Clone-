@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aGK-Io-qlJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,11 +76,12 @@
                         <outlet property="previewView" destination="ziu-3T-IWG" id="csc-pd-Rlh"/>
                         <outlet property="recordButton" destination="JXU-xM-A6u" id="xW9-ZO-KqR"/>
                         <segue destination="Kdl-IR-2Eg" kind="presentation" identifier="LoginVC" id="DQj-Rf-Wko"/>
+                        <segue destination="aGK-Io-qlJ" kind="show" identifier="UsersVC" id="cSV-zi-sX1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="25" y="94"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="IAe-wC-izj">
@@ -421,7 +422,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pDR-ep-jbI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="gm7-7f-Ijy" customClass="UserCell" customModule="DevChat" customModuleProvider="target">
@@ -450,20 +451,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="97x-mz-drW">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Juo-JB-pZ6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="jAg-H1-ABc">
+                                        <barButtonItem key="rightBarButtonItem" image="send_snap" id="LLy-Em-77c">
+                                            <connections>
+                                                <action selector="sendVideoPressed:" destination="aGK-Io-qlJ" id="yyR-yy-xw5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="97x-mz-drW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="97x-mz-drW" firstAttribute="top" secondItem="SqS-iE-4a0" secondAttribute="top" constant="20" id="5B8-d4-Khc"/>
+                            <constraint firstItem="Juo-JB-pZ6" firstAttribute="top" secondItem="SC1-y5-4iy" secondAttribute="bottom" id="3yf-15-WXu"/>
+                            <constraint firstItem="Juo-JB-pZ6" firstAttribute="leading" secondItem="SqS-iE-4a0" secondAttribute="leading" id="7Qt-q0-sjZ"/>
+                            <constraint firstItem="97x-mz-drW" firstAttribute="top" secondItem="Juo-JB-pZ6" secondAttribute="bottom" id="8TT-6h-LMg"/>
                             <constraint firstItem="pDR-ep-jbI" firstAttribute="top" secondItem="97x-mz-drW" secondAttribute="bottom" id="AVa-2n-L45"/>
                             <constraint firstAttribute="trailing" secondItem="pDR-ep-jbI" secondAttribute="trailing" id="YRv-TY-gGY"/>
                             <constraint firstAttribute="trailing" secondItem="97x-mz-drW" secondAttribute="trailing" id="aTE-ci-TrG"/>
                             <constraint firstItem="pDR-ep-jbI" firstAttribute="leading" secondItem="SqS-iE-4a0" secondAttribute="leading" id="ksQ-kO-YeH"/>
                             <constraint firstItem="AgK-DC-3Yc" firstAttribute="top" secondItem="pDR-ep-jbI" secondAttribute="bottom" id="ncS-so-amk"/>
                             <constraint firstItem="97x-mz-drW" firstAttribute="leading" secondItem="SqS-iE-4a0" secondAttribute="leading" id="qcC-rD-fjL"/>
+                            <constraint firstAttribute="trailing" secondItem="Juo-JB-pZ6" secondAttribute="trailing" id="rEE-eW-oCG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -472,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABZ-Nd-L81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154.4000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="24.800000000000001" y="-661.61919040479768"/>
         </scene>
     </scenes>
     <resources>
@@ -480,5 +496,6 @@
         <image name="createsnap_btn" width="30" height="30"/>
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
+        <image name="send_snap" width="24" height="23"/>
     </resources>
 </document>

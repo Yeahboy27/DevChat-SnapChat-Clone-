@@ -14,4 +14,6 @@ protocol CameraVCDelegate {
     func shouldEnablePhotoUI(enabled: Bool)
     func canStartRecording()
     func recordingHasStarted()
+    func videoRecordingComplete(videoURL: URL)
+    func videoRecordingFailed()
 }
