@@ -21,8 +21,12 @@ class DataService {
         return FIRDatabase.database().reference()
     }
     
+    var usersReference: FIRDatabaseReference {
+        return mainReference.child(FIR_CHILD_USERS)
+    }
+    
     func saveUser(uid: String, profile: [String : Any]) {
-        mainReference.child("users").child(uid).child("profile").setValue(profile)
+        mainReference.child(FIR_CHILD_USERS).child(uid).child(FIR_CHILD_PROFILE).setValue(profile)
     }
     
 }

@@ -11,10 +11,6 @@ import UIKit
 @IBDesignable
 class RoundTextField: UITextField, UITextFieldDelegate {
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        delegate = self
-    }
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
